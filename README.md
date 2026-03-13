@@ -13,7 +13,7 @@
 | Item | Status | Notes |
 |------|--------|-------|
 | `README.md` | ✅ Done | This file |
-| `requirements.txt` / `environment.yml` | ❌ **Missing** | Must be created before submission |
+| `requirements.txt` / `environment.yml` | ✅ Done | |
 | `data/raw/openaq/pm25_nyc_2025Q1.json` | ✅ Done | 90 daily records |
 | `data/raw/openaq/pm25_la_2025Q1.json` | ✅ Done | 90 daily records |
 | `data/raw/openaq/pm25_chicago_2025Q1.json` | ✅ Done | 90 daily records |
@@ -24,8 +24,8 @@
 | `part2_airquality/01_ingest.ipynb` | ✅ Done | See §01 below |
 | `part2_airquality/02_clean_features.ipynb` | ✅ Done | See §02 below |
 | `part2_airquality/03_stats_eda_viz.ipynb` | ✅ Done | See §03 below |
-| `part2_airquality/report.pdf` | ⚠️ **Incomplete** | `report.docx` exists — must be converted to PDF |
-| `part2_airquality/data_dictionary.pdf` | ❌ **Missing** | Must be created before submission |
+| `part2_airquality/report.pdf` | ✅ Done | 
+| `part2_airquality/data_dictionary.pdf` | ✅ Done | 
 
 ---
 
@@ -114,7 +114,7 @@
 | Required metrics with interpretation | ✅ Done | In `report.docx` §3–4 |
 | Required four plots with captions | ✅ Done | In `report.docx` §5 |
 | Limitations and additional data desired | ✅ Done | In `report.docx` §6 |
-| **Format: PDF** (`report.pdf`) | ⚠️ **Incomplete** | Currently `report.docx` — convert to PDF |
+| **Format: PDF** (`report.pdf`) | ✅ Done | |
 
 ---
 
@@ -122,7 +122,7 @@
 
 | Requirement | Status | Notes |
 |-------------|--------|-------|
-| `data_dictionary.pdf` describing curated dataset | ❌ **Missing** | Column name, type, unit, meaning, notes for all 9 columns |
+| `data_dictionary.pdf` describing curated dataset | ✅ Done | Column name, type, unit, meaning, notes for all 9 columns |
 
 ---
 
@@ -134,20 +134,15 @@
 | Window metrics computed in Pandas or DuckDB | ✅ Done | Pandas `rolling`, `diff`, `pct_change` |
 | Each plot has title + labeled axes + units | ✅ Done | |
 | All work in `.ipynb` notebooks | ✅ Done | |
-| Runs end-to-end following README | ⚠️ **Partial** | Needs `requirements.txt`; API calls skip re-fetching if files exist |
+| Runs end-to-end following README | ✅ Done | API calls skip re-fetching if files exist |
 | Raw data saved under `data/raw/` | ✅ Done | |
 | Curated data saved under `data/curated/` | ✅ Done | |
-| `data_dictionary.pdf` | ❌ **Missing** | |
-| `requirements.txt` or `environment.yml` | ❌ **Missing** | |
+| `data_dictionary.pdf` | ✅ Done |
+| `requirements.txt` or `environment.yml` | ✅ Done | |
 
 ---
 
 ## What Still Needs to Be Done
-
-### ❌ Must-Do Before Submission
-
-1. **Convert `report.docx` → `report.pdf`**
-   Open `part2_airquality/report.docx` in Microsoft Word (or LibreOffice) and export/save as PDF named `report.pdf` in the same folder.
 
 2. **Create `data_dictionary.pdf`**
    Must document all 9 columns of `data/curated/part2_airquality_curated.parquet`:
@@ -165,20 +160,6 @@
    | is_weekend | Int64 | 0 / 1 | Weekend flag | 1 = Saturday or Sunday; 0 = weekday |
 
    Create this as a PDF (Word, Google Docs, or LaTeX).
-
-3. **Create `requirements.txt` or `environment.yml`**
-   Minimum packages needed to reproduce all notebooks:
-   ```
-   pandas
-   numpy
-   requests
-   duckdb
-   matplotlib
-   seaborn
-   pyarrow
-   python-docx
-   jupyter
-   ```
 
 4. **Submission email**
    Send to `inzamam.rahaman@uwi.edu` (CC: `kris.manohar@sta.uwi.edu`)
@@ -220,7 +201,7 @@ jupyter nbconvert --to notebook --execute part2_airquality/03_stats_eda_viz.ipyn
 ```
 project/
 ├── README.md
-├── requirements.txt          ← MISSING — must create
+├── requirements.txt
 ├── data/
 │   ├── raw/
 │   │   ├── openaq/
